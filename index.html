@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Conteo de Votos</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <section>
+    <div class="container">
+      <h1>Votación de Mesas</h1>
+
+      <!-- Sección para seleccionar el número de mesas -->
+      <div id="add-tables-section">
+        <h2>Agregar Mesas</h2>
+        <input type="number" id="numTables" placeholder="Número de mesas" class="input-field" aria-label="Número de mesas">
+        <button onclick="createTableInputs()" class="btn" aria-label="Crear Mesas">Crear Mesas</button>
+      </div>
+
+      <div id="table-inputs"></div>
+
+      <!-- Botón de votación -->
+      <div id="vote-section" style="display:none;">
+        <h2>Vota por la mejor mesa</h2>
+        <div id="tables-list" role="list"></div>
+      </div>
+
+      <!-- Resultados -->
+      <div id="results-section" style="display:none;">
+        <h2>Resultados</h2>
+        <div id="numeric-results" aria-live="polite"></div>
+        <div id="results-graph"></div>
+      </div>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>

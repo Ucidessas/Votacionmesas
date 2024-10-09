@@ -1,0 +1,152 @@
+/* General body styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f1f8e9;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+/* Main container */
+.container {
+    max-width: 900px;
+    margin: 20px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 90%;
+    box-sizing: border-box;
+}
+
+h1, h2 {
+    color: #00796b;
+    font-size: 2.2em;
+    margin-bottom: 15px;
+}
+
+/* Inputs and buttons */
+input, button {
+    display: block;
+    width: 100%;
+    max-width: 300px;
+    margin: 15px auto;
+    padding: 14px;
+    font-size: 1.2em;
+    border-radius: 25px;
+    border: 1px solid #00796b;
+    outline: none;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+input {
+    background-color: #e0f7fa;
+    color: #00796b;
+}
+
+input:focus {
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+button {
+    background-color: #00796b;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background-color: #004d40;
+    transform: translateY(-2px);
+}
+
+.vote-btn {
+    background-color: #ff5722;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1.1em;
+    border-radius: 25px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.vote-btn:hover {
+    background-color: #d84315;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#tables-list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.table-item {
+    flex: 1 1 40%;
+    margin: 10px;
+    padding: 20px;
+    background-color: #80deea;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.table-item h3 {
+    color: #00796b;
+    font-size: 1.4em;
+}
+
+/* Results styling */
+#results-section {
+    margin-top: 20px;
+}
+
+#numeric-results {
+    margin-top: 10px;
+    font-size: 1.4em;
+    color: #00796b;
+}
+
+/* Simple bar graph styling */
+#results-graph {
+    margin: 20px 0;
+    text-align: left;
+}
+
+.bar {
+    height: 30px;
+    background-color: #00796b;
+    margin: 10px 0;
+    border-radius: 15px;
+    position: relative;
+}
+
+.bar-label {
+    position: absolute;
+    left: 10px;
+    color: white;
+    font-weight: bold;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .table-item {
+        flex: 1 1 90%;
+    }
+
+    h1, h2 {
+        font-size: 1.8em;
+    }
+
+    button, input, .vote-btn {
+        font-size: 1em;
+        padding: 12px;
+    }
+}
