@@ -66,30 +66,14 @@ button:hover {
     transform: translateY(-2px);
 }
 
-.vote-btn {
-    background-color: #ff5722;
-    color: white;
-    padding: 10px 20px;
-    font-size: 1.1em;
-    border-radius: 25px;
-    cursor: pointer;
-    margin-bottom: 10px;
-    transition: background-color 0.3s, box-shadow 0.3s;
-}
-
-.vote-btn:hover {
-    background-color: #d84315;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
 #tables-list {
     display: flex;
-    justify-content: space-around;
     flex-wrap: wrap;
+    justify-content: space-around;
 }
 
 .table-item {
-    flex: 1 1 40%;
+    flex: 1 1 30%; /* Cambiado para que haya tres columnas */
     margin: 10px;
     padding: 20px;
     background-color: #80deea;
@@ -101,6 +85,24 @@ button:hover {
 .table-item h3 {
     color: #00796b;
     font-size: 1.4em;
+}
+
+/* Botón de votación completo */
+.vote-btn {
+    background-color: #ff5722;
+    color: white;
+    padding: 20px 0; /* Aumentar el padding vertical */
+    font-size: 1.2em;
+    border-radius: 25px;
+    cursor: pointer;
+    margin-top: 10px;
+    width: 100%; /* El botón ocupa todo el ancho del recuadro */
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.vote-btn:hover {
+    background-color: #d84315;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 /* Results styling */
@@ -138,15 +140,21 @@ button:hover {
 /* Responsive adjustments */
 @media (max-width: 768px) {
     .table-item {
-        flex: 1 1 90%;
+        flex: 1 1 45%; /* Dos columnas en dispositivos pequeños */
     }
 
     h1, h2 {
         font-size: 1.8em;
     }
 
-    button, input, .vote-btn {
+    button, input {
         font-size: 1em;
         padding: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .table-item {
+        flex: 1 1 90%; /* Una columna en dispositivos muy pequeños */
     }
 }
