@@ -77,7 +77,7 @@ let state = {
       bar.style.width = `${(state.votes[i] / Math.max(...state.votes) * 100) || 0}%`; // Ajustar el ancho según los votos
       const barLabel = document.createElement('div');
       barLabel.className = 'bar-label';
-      barLabel.innerHTML = `${state.votes[i]} votos`;
+      barLabel.innerText = `${table}: ${state.votes[i]} votos`;
       bar.appendChild(barLabel);
       resultsGraphDiv.appendChild(bar);
     });
